@@ -13,6 +13,7 @@ use Illuminate\Routing\Events\Routing;
 Route::get('/', function () {
     return view('welcome');
 });
+///đâsỳuyufyuouyi
 
 Route::get('/admin/users/login/',[LoginController::class,'index'])->name('login');
 Route::post('/admin/users/login/store/',[LoginController::class,'store']);
@@ -48,8 +49,7 @@ Route::middleware(['auth'])->group(function(){
     });
         
 
-
-
+gccgh
 
         });
 

@@ -13,7 +13,7 @@ use Illuminate\Routing\Events\Routing;
 Route::get('/', function () {
     return view('welcome');
 });
-///đâsỳuyufyuouyi
+
 
 Route::get('/admin/users/login/',[LoginController::class,'index'])->name('login');
 Route::post('/admin/users/login/store/',[LoginController::class,'store']);
@@ -37,7 +37,7 @@ Route::middleware(['auth'])->group(function(){
                 
 
             });
-        ///products ádas ádasd
+        ///products  
    
         Route::prefix('products')->group(function(){
             Route::get('add',[ProductController::class,'create']);
@@ -49,7 +49,7 @@ Route::middleware(['auth'])->group(function(){
     });
         
 
-gccgh
+
 
         });
 

@@ -87,9 +87,9 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">silde</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/silde/add/"> Thêm silde</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/silde/list/">Danh sách Slide</a></li>
+               
               </ul>
             </div>
           </li>

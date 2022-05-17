@@ -53,6 +53,7 @@ Route::middleware(['auth'])->group(function(){
     Route::prefix(('slider'))->group(function(){
 
             Route::get('add',[SildeController::class,'create']);
+            Route::post('add',[SildeController::class,'store']);
 
     });
         

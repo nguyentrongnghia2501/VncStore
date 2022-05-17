@@ -21,6 +21,17 @@ class SildeController extends Controller
             ]);
 
         }
+        public function store(Request $request){
+                // dd($request->all());
+                $this->validate($request,[
+                        'name'=>'required',
+                        'thumb'=>'required',
+                        'url'=>'required',
+
+                ]);
+ 
+                  $this->slide->insert($request);
+        }
 
 
 }

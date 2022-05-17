@@ -27,7 +27,7 @@
                       </div>
                       <div class="form-group">
                         <label for="exampleInputCity1">sắp xếp</label>
-                        <input type="number" class="form-control" id="price" name="price"  value="" placeholder="Location">
+                        <input type="number" class="form-control" id="sort_by" name="sort_by"  value="" placeholder="Location">
                       </div>
                       
                       

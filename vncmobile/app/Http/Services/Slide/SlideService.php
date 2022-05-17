@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Slide;
+namespace App\Http\Services\Slide;
 class SlideService{
 
 
-    
+
 
 }

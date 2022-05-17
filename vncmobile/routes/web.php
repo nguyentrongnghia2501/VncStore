@@ -50,7 +50,7 @@ Route::middleware(['auth'])->group(function(){
             Route::post('edit/{id}',[ProductController::class,'update']);
     });
     /// slide
-    Route::prefix(('slide'))->group(function(){
+    Route::prefix(('slider'))->group(function(){
 
             Route::get('add',[SildeController::class,'create']);
 

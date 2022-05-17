@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('sildes', function (Blueprint $table) {
             $table->id();
+            $table->string('name',255);
+            $table->string('url',255)->nullable();
+            $table->string('thumb',255);
+            $table->integer('sort_by');
+            $table->integer('active');
             $table->timestamps();
         });
     }

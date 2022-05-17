@@ -80,12 +80,13 @@
           <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-icon">
-                <i class="mdi mdi-laptop"></i>
+              <i class="fa-solid fa-images"></i>
               </span>
               <span class="menu-title">Slide</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
+              
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="/admin/silde/add/"> Thêm silde</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/admin/silde/list/">Danh sách Slide</a></li>

@@ -12,6 +12,7 @@ use Illuminate\Routing\Events\Routing;
 
 Route::get('/', function () {
     return view('welcome');
+    
 });
 
 
@@ -26,7 +27,7 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/test',[TestController::class,'store']);
         Route::post('/test/ps/',[TestController::class,'ps']);
 
-        //  Menus
+        //  Menus áda
             Route::prefix('menus')->group(function(){
                     Route::get('add',[MenuController::class,'create']);
                     Route::post('add',[MenuController::class,'store']);

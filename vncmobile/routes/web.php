@@ -8,11 +8,12 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\Products\ProductController;
 use App\Http\Controllers\TestController;
 use Illuminate\Routing\Events\Routing;
+use App\Http\Controllers\Admin\SildeController;
 
 
 Route::get('/', function () {
     return view('welcome');
-    
+
 });
 
 
@@ -47,6 +48,12 @@ Route::middleware(['auth'])->group(function(){
             Route::get('delete/{id}',[ProductController::class,'destroy']);
             Route::get('edit/{id}',[ProductController::class,'show']);
             Route::post('edit/{id}',[ProductController::class,'update']);
+    });
+    /// slide
+    Route::prefix(('slide'))->group(function(){
+
+            Route::get('add',[SildeController::class,'create']);
+
     });
         
 

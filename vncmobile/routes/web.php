@@ -54,6 +54,7 @@ Route::middleware(['auth'])->group(function(){
 
             Route::get('add',[SildeController::class,'create']);
             Route::post('add',[SildeController::class,'store']);
+            Route::get('list',[SildeController::class,'index']);
 
     });
         

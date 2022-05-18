@@ -64,6 +64,7 @@ class ProductController extends Controller
              $img=time().'_'.$thum->getClientOriginalName();
              $destination=public_path('nvs');
              $thum->move($destination, $img);
+             
         }
         $allrequest = $request->all();
         $name= $allrequest['name'];
@@ -93,6 +94,7 @@ class ProductController extends Controller
                    }
                    else{
                     Session::flash('error', 'Thêm thất bại!');
+                    
                    }
 
 

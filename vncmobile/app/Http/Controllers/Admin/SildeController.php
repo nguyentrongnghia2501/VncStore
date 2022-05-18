@@ -21,7 +21,7 @@ class SildeController extends Controller
         public function create(){
             return view('admin.slider.add',[
                 'title'=>'Thêm slide mới !',
-                'slider'=>$this->slide->getParent()
+               
             ]);
 
         }
@@ -68,6 +68,13 @@ class SildeController extends Controller
                    return redirect()->back();
                
 
+        }
+        public function index(){
+            return view('admin.slider.list',
+            [
+                'title'=>'Danh sách slide',
+                'silder'=>$this->slide->getshow()
+            ]);
         }
 
 

@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Services\Slide;
-use app\Models\Silde;
+
 use Illuminate\Support\Facades\Session;
 use phpDocumentor\Reflection\DocBlock\Tags\Return_;
+use app\Models\Silde;
+use Illuminate\Support\Facades\DB;
 
 class SlideService{
 
@@ -11,8 +13,9 @@ class SlideService{
         {
                 
         }
-        public function getParent(){
-              return  Silde::where('id',1)->get();
+        public function getshow(){
+            
+            return DB::table('sildes')->get();
             
         }
 

@@ -2,10 +2,10 @@
 
 namespace App\Http\Services\Slide;
 
-use Illuminate\Support\Facades\Session;
-use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 use app\Models\Silde;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
+use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 
 class SlideService{
 
@@ -17,6 +17,10 @@ class SlideService{
             
             return DB::table('sildes')->get();
             
+        }
+        public function get($id){
+
+           return Silde::where('id',$id)->get();
         }
 
 

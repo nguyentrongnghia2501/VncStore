@@ -22,7 +22,10 @@
                                </td>
                                 <td>{{ $silders->sort_by}}</td>
                                 <td> active </td>
-                                <td></td>
+                                <td>
+                                    <a href="/admin/slider/delete/{{$silders->id}}" class="btn btn-warning btn-sm"><i class="fa-solid fa-delete-left"></i></a>
+                                    <a href="/admin/slider/edit/{{$silders->id}}" class="btn btn-success btn-sm"> <i class="fa-solid fa-file-pen"></i></a>
+                                </td>
                             </tr>
 
                     </tbody>

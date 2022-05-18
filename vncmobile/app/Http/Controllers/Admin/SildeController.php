@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Services\Slide\SlideService;
+use App\Models\Silde;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
@@ -75,6 +76,18 @@ class SildeController extends Controller
                 'title'=>'Danh sách slide',
                 'silder'=>$this->slide->getshow()
             ]);
+        }
+        public function destroy($id){
+                $destroy = Silde::where('id',$id)->delete();
+                return redirect()->back();
+        }
+        public function show($id){
+            $silder = Silde::where('id',$id)->get();
+              return view('admin.slider.edit',[
+                        'title'=>'sua silde',
+                       'silder'=>$silder
+
+              ]);
         }
 
 

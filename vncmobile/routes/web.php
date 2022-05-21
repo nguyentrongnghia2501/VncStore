@@ -57,7 +57,7 @@ Route::middleware(['auth'])->group(function(){
             Route::get('list',[SildeController::class,'index']);
             Route::get('delete/{id}',[SildeController::class,'destroy']);
             Route::get('edit/{id}',[SildeController::class,'show']);
-
+            Route::post('edit/{id}',[SildeController::class,'update']);
     });
         
 

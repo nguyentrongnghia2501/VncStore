@@ -89,6 +89,50 @@ class SildeController extends Controller
 
               ]);
         }
+        public function update(Request $request, $id ){
+                $this->validate($request,
+                [
+                    'name' => 'required',
+                   'url' => 'required',
+                    
+
+                ],
+                [
+                    'name.required' => 'Bạn chưa nhập tên !',
+                    'url.required' => 'Bạn chưa nhập nội dung!',
+
+                ]);
+                if($request->hasFile('thumb')){
+                    $this->validate($request,[
+                        'thum' => 'mimes:jpg,jpeg,png,gif|max:2048',
+                    ],    
+                    [
+                        'thum.mimes' => 'Chỉ chấp nhận hình thẻ với đuôi .jpg .jpeg .png .gif',
+                        'thum.max' => 'Hình thẻ giới hạn dung lượng không quá 2M',
+                    ]);
+                    $getHT = DB::table('sildes')->select('thumb')->where('id',$request->id)->get();
+                    if($getHT[0]->thumb != '' && file_exists(public_path('nvs/'.$getHT[0]->thumb)))
+                    {
+                        unlink(public_path('/nvs/'.$getHT[0]->thumb));
+                    }
+                     //save img
+                     $thumb = $request->file('thumb');
+                     $getthumb = time().'_'.$thumb->getClientOriginalName();
+                     $despath =  public_path('nvs/');
+                     $thumb->move($despath,$getthumb);
+                     $updateThumb = DB::table('sildes')->where('id',$id)->update(['thumb'=>$getthumb]);
+                    
+
+                }
+                $updateData = DB::table('sildes')->where('id',$id)->update([
+                        'name'=>$request->name,
+                        'url'=>$request->url,
+                        'sort_by'=>$request->sort_by,
+
+
+                ]);
+
+        }
 
 
 }

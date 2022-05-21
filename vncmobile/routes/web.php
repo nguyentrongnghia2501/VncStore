@@ -9,12 +9,13 @@ use App\Http\Controllers\Products\ProductController;
 use App\Http\Controllers\TestController;
 use Illuminate\Routing\Events\Routing;
 use App\Http\Controllers\Admin\SildeController;
+use App\Http\Controllers\MainUsController;
 
+// Route::get('/', function () {
+//     return view('welcome');
 
-Route::get('/', function () {
-    return view('welcome');
+// });
 
-});
 
 
 Route::get('/admin/users/login/',[LoginController::class,'index'])->name('login');
@@ -66,3 +67,5 @@ Route::middleware(['auth'])->group(function(){
         });
 
 });
+///
+Route::get('/',[MainUsController::class,'index']);

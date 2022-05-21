@@ -131,6 +131,13 @@ class SildeController extends Controller
 
 
                 ]);
+                if($updateData){
+                    Session::flash('success', 'Sửa học sinh thành công!');
+                }
+                else{
+                    Session::flash('success', 'Sửa học sinh thành công!');
+                }
+                return redirect()->back();
 
         }
 

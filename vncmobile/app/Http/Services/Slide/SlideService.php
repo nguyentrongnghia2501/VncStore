@@ -18,10 +18,7 @@ class SlideService{
             return DB::table('sildes')->get();
             
         }
-        public function get($id){
-
-           return Silde::where('id',$id)->get();
-        }
+      
 
 
 }

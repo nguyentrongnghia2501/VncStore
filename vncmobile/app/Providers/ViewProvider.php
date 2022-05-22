@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Http\View\Composers\MenuComposers;
+
+use Illuminate\Support\Facades\View;
+
 use Illuminate\Support\ServiceProvider;
 
 class ViewProvider extends ServiceProvider
@@ -23,6 +27,8 @@ class ViewProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        View::composer('main',MenuComposers::class);
+ 
+        
     }
 }

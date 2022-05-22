@@ -18,6 +18,7 @@ class ProfileComposer
     {
         // $view->with('count', $this->users->count());
         $menus = Menu::select('id','name','parent_id')->where('active',1)->orderByDesc('id')->get();
+        dd($menus);
         $view->with('menus', $menus);
     }
 }

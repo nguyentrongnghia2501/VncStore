@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
    @include('head')
@@ -11,7 +10,8 @@
     <![endif]-->
   </head>
   <body>
-
+  {{dd(1)}}
+<!DOCTYPE html>
     <div class="header-area">
         <div class="container">
             <div class="row">

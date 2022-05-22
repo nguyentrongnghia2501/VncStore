@@ -1,6 +1,6 @@
 <?php
  
-namespace App\View\Composers;
+namespace App\Http\View\Composers;
 
 use App\Models\Menu;
 use App\Repositories\UserRepository;

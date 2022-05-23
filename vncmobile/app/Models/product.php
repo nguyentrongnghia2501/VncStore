@@ -23,5 +23,9 @@ class product extends Model
     public function menu(){
         return $this->hasOne(Menu::class,'id','menu_id');
     }
+    function sub_Menu(){
+        return $this->hasMany('App\Product','id');
+
+    }
 
 }

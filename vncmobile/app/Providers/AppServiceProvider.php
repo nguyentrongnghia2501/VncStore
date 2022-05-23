@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Menu;
+use App\Models\product;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -28,5 +29,7 @@ class AppServiceProvider extends ServiceProvider
         //
         $menus =  Menu::all();
         View::share('menus',$menus);
+        $product =product::all();
+        View::share('product',$product);
     }
 }

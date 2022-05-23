@@ -8,7 +8,7 @@ class MainUsController extends Controller
 {
     //
     public function index(){
-        return view('main',[
+        return view('home',[
             'title'=>'Vnc Store']);
     }
 }

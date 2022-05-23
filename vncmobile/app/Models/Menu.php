@@ -15,4 +15,8 @@ class Menu extends Model
         'active'
 
     ];
+    function sub_Menu(){
+        return $this->hasMany('App\Menu','id');
+
+    }
 }

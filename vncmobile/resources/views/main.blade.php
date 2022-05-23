@@ -140,14 +140,12 @@
                         <h2 class="section-title">Latest Products</h2>
                         <div class="product-carousel">
                             <div class="single-product">
-                                @foreach($product as $key =>$products)
                                 <div class="product-f-image">
-                                    <img src="nvs/{{$products->thum}}" alt="">
+                                    <img src="/Ustemplate/img/product-1.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
-                                    
                                 </div>
                                 
                                 <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
@@ -155,7 +153,7 @@
                                 <div class="product-carousel-price">
                                     <ins>$700.00</ins> <del>$800.00</del>
                                 </div> 
-                            </div>@endforeach
+                            </div>
                             <div class="single-product">
                                 <div class="product-f-image">
                                     <img src="/Ustemplate/img/product-2.jpg" alt="">
@@ -282,6 +280,7 @@
                                 <ins>$400.00</ins> <del>$425.00</del>
                             </div>                            
                         </div>
+                        <!--  -->
                         <div class="single-wid-product">
                             <a href="single-product.html"><img src="/Ustemplate/img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
                             <h2><a href="single-product.html">Apple new mac book 2015</a></h2>
@@ -418,7 +417,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
-                        <h2>e<span>Electronics</span></h2>
+                        <h2>e<span>Vnc Mobile</span></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>

@@ -40,18 +40,23 @@ class Helper{
             }
             public static function menus($menus,$parent_id=0){
               //// truyền menu và làm menu thứ cấp ở web chính 
-
+            
                  $html='';
                  foreach($menus as $key =>$menu){
                       if($menu->parent_id==$parent_id)
                       {
                         $html.='
-                              <li> 
+                              <li class="dropdown dropdown-small"> 
                               <a href="/danh-muc/'.$menu->id.'-'. Str::slug($menu->name, '-').'.html">
                               '.$menu->name.'
                               </a>';
                               if(self::isChild($menus , $menu->id)){
-
+                                    $html.=' <ul class="dropdown-menu"> ';
+                                    $html.= self::menus($menus,$menu->id);
+                                    
+                                    $html.=' </ul>';
+                                   
+                                   
                               }
                              $html.=' </li>
                         ';
@@ -62,8 +67,15 @@ class Helper{
             }
             public static function isChild($menus,$id){
 
-                  foreach ($menus as $k =>$menu){
+                  foreach ($menus as $menu){
+                    if($menu->parent_id == $id)
+                    {
+                       return true;
+                    }
                     
+                      return false;
+                    
+
                   }
 
             }

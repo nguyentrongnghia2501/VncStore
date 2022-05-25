@@ -76,12 +76,14 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                       
+                         
                         <li class="active"><a href="index.html">Home</a></li>
-                        @foreach($menus as $Key =>$menu)
-                        <li><a href="shop.html">{{$menu->name}}</a></li>
+                        {!! \App\Helpers\Helper::menus($menus) !!}
+                        
+                        <!-- @foreach($menus as $Key =>$menu) -->
+                        <!-- <li><a href="shop.html">{{$menu->name}}</a></li> -->
                        
-                        @endforeach
+                        <!-- @endforeach -->
                     </ul>
                    
                 </div>  

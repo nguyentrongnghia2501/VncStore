@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Helpers;
+use Illuminate\Support\Str;
 class Helper{
             public static function menu($menus , $parent_id=0,$char=''){
                                 $html='';
@@ -37,5 +38,25 @@ class Helper{
                  return $active ==0 ? '<span class="btn btn-danger">No</span>': '<span class="btn btn-success">Yes</span>';
 
             }
+            public static function menus($menus,$parent_id=0){
+              //// truyền menu và làm menu thứ cấp ở web chính 
 
+                 $html='';
+                 foreach($menus as $key =>$menu){
+                      if($menu->parent_id==$parent_id)
+                      {
+                        $html.='
+                              <li> 
+                              <a href="/danh-muc/'.$menu->id.'-'. Str::slug($menu->name, '-').'.html">
+                              '.$menu->name.'
+                              </a>
+                              </li>
+                        ';
+                      }
+
+                 }
+                 return $html;
+            }
+
+   
 }

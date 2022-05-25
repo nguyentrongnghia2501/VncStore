@@ -49,13 +49,23 @@ class Helper{
                               <li> 
                               <a href="/danh-muc/'.$menu->id.'-'. Str::slug($menu->name, '-').'.html">
                               '.$menu->name.'
-                              </a>
-                              </li>
+                              </a>';
+                              if(self::isChild($menus , $menu->id)){
+
+                              }
+                             $html.=' </li>
                         ';
                       }
 
                  }
                  return $html;
+            }
+            public static function isChild($menus,$id){
+
+                  foreach ($menus as $k =>$menu){
+                    
+                  }
+
             }
 
    

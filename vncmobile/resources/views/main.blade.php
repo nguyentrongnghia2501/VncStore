@@ -136,11 +136,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                @foreach($product as $key =>$products)
                     <div class="latest-product">
                         <h2 class="section-title">Latest Products</h2>
                         
-                      
+                        @foreach($product as $key =>$products)
                         <div class="product-carousel">
                             <div class="single-product">
                                
@@ -163,11 +162,10 @@
                            
                             
                             
-                            
+                               
                         </div>
-                        
+                     @endforeach
                     </div>
-                    @endforeach
                 </div>
             </div>
         </div>

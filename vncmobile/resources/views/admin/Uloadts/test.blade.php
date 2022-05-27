@@ -1,29 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<title>Drop-Down Navigation Menu</title>
+<link rel="stylesheet" href="/css/css.css">
 </head>
 <body>
-
-     <form action="/admin/test/ps/" method="POST" enctype="multipart/form-data">
-            <label for="">name</label>
-            <input type="text" name="name" id="name">
-            <br>
-            <label for="">img</label>
-            <input type="file" name="thum" id="thum">
-            <input type="submit" value="tải lên">
-            @csrf
-            
-             </div>
-     </form>
-                     <?php  
-                        $menus = App\Models\product::where('thum')->get();
-                        
-                        ?>
-                      
-    
+<main>
+<nav>
+  <ul id="mainMenu">
+<li><a href="#">Home</a>
+     <ul>
+<li><a href="history.html">Company History</a></li>
+<li><a href="staff.html">Our Staff</a></li>
+<li><a href="press.html">Press Releases</a></li>
+<li><a href="investorInfo.html">Investor Information</a></li>
+</ul>
+</li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Support</a></li>
+</ul>
+</nav>
+</main>
 </body>
 </html>

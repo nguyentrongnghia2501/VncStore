@@ -51,7 +51,7 @@ class Helper{
                               '.$menu->name.'
                               </a>';
                               if(self::isChild($menus , $menu->id)){
-                                    $html.=' <ul class="dropdown-menu"> ';
+                                    $html.=' <ul> ';
                                     $html.= self::menus($menus,$menu->id);
                                     
                                     $html.=' </ul>';

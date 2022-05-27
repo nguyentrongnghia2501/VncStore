@@ -82,9 +82,10 @@
                         
                         <!-- @foreach($menus as $Key =>$menu) -->
                         <!-- <li><a href="shop.html">{{$menu->name}}</a></li> -->
-                       
+                       đâsádasd
                         <!-- @endforeach -->
                     </ul>
+                      
                    
                 </div>  
             </div>

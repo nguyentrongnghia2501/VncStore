@@ -47,16 +47,17 @@ class Helper{
                       {
                        
                         $html.='
-                              <li> 
-                              <a href="/danh-muc/'.$menu->id.'-'. Str::slug($menu->name, '-').'.html">
+                              <li class="dropdown"> 
+                              <a  href="/danh-muc/'.$menu->id.'-'. Str::slug($menu->name, '-').'.html" class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;" >
                               '.$menu->name.'
                               </a>';
                              
                               if(self::isChild($menus , $menu->id)){
 
-                                    $html.=' <ul> ';
+                                    $html.=' <ul class="dropdown-menu"> ';
                                    
-                                     $html.= self::menus($menus,$menu->id);
+                                    //  $html.= self::menus($menus,$menu->id);
+                                     dd($menu->name);
                                      
                               
                                     
@@ -74,7 +75,7 @@ class Helper{
             }
             public static function isChild($menus,$id){
 
-                  foreach ($menus as $key=> $menu){
+                  foreach ($menus as $menu){
                     if($menu->parent_id == $id)
                     {
                        return true;

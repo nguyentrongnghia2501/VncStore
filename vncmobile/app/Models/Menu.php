@@ -19,4 +19,9 @@ class Menu extends Model
         return $this->hasMany('App\Menu','id');
 
     }
+    public function isChild()
+    {
+        # code...
+        return $this->hasMany(Menu::class,'parent_id');
+    }
 }

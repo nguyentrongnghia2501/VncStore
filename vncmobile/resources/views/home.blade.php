@@ -75,15 +75,15 @@
                     </button>
                 </div> 
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <ul id="mainMenu" >
                          
                         <li class="active"><a href="index.html">Home</a></li>
-                        {!! \App\Helpers\Helper::menus($menus) !!}
-                        
-                        <!-- @foreach($menus as $Key =>$menu) -->
-                        <!-- <li><a href="shop.html">{{$menu->name}}</a></li> -->
-                       đâsádasd
-                        <!-- @endforeach -->
+                        <!--  -->
+                  
+                            {!! \App\Helpers\Helper::menus($menus) !!}
+                      
+                      
+                     
                     </ul>
                       
                    

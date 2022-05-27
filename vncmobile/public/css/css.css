@@ -13,22 +13,24 @@ ul {
     width: 120px;
     float: left;
     margin-left: 2px;
+    border: 1px solid #000;
 }
 
 #mainMenu a {
     display: block;
     padding: 3px;
     text-decoration: none;
-    background-color: #fff;
+    background-color: rgb(27, 199, 113);
     color: #009;
 }
 
 #mainMenu a:hover {
-    background-color: #009;
-    color: #fff;
+    background-color: rgb(6, 6, 20);
+    color: rgb(34, 235, 158);
 }
 
 #mainMenu li ul {
+    z-index: 1;
     display: none;
     position: absolute;
     margin: 0px;

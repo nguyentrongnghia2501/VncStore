@@ -40,7 +40,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-6">
-                                            <div class="slide-content">
+                                            <div class="slide-content">ádasdasdasd
                                                 <h2>We are awesome</h2>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, dolorem, excepturi. Dolore aliquam quibusdam ut quae iure vero exercitationem ratione!</p>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ab molestiae minus reiciendis! Pariatur ab rerum, sapiente ex nostrum laudantium.</p>

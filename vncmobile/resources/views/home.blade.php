@@ -7,7 +7,7 @@
 
     <div class="container">
         <div class="row">
-           
+
 
 
         </div>
@@ -42,13 +42,15 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-
+            
             <div class="header-navigation">
                 <ul>
-                    <li class="dropdown">Home</li>
-                    @foreach($menus_lm as $menul)
+                    <Li><a href="">Home</a></Li>
+                    @foreach($menus_lm as $menul) 
+                    <!-- href="/danh-muc/'.$menu->id.'-'. Str::slug($menu->name, '-').'.html" 
+                    href="{{$menul->id}}.'-'.{{Str::slug($menul->name, '-').'.html'}}"-->
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
+                        <a href="/danh-muc/{{$menul->id}}">
                             {{$menul->name}}
 
                         </a>
@@ -57,7 +59,7 @@
                         <ul class="dropdown-menu" >
 
                               @foreach($menul->isChild as $menuChild)
-                            <li style="position: relative;"><a href="shop-product-list.html">{{$menuChild->name}}</a></li>
+                            <li><a href="shop-product-list.html">{{$menuChild->name}}</a></li>
                             @endforeach
                         </ul>
                         @endif
@@ -65,7 +67,7 @@
                     @endforeach
 
                 </ul>
-            </div>
+            </div> 
         </div>
     </div>
 

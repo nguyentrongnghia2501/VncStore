@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                        <h2 class="section-title">Latest Products</h2>
+                        <h2 class="section-title">Sản phẩm nổi bật </h2>
                         <div class="product-carousel">
                         @foreach($product  as $key =>$products )
                             <div class="single-product">
@@ -19,7 +19,7 @@
                                 <h2><a href="/san-pham/{{$products->id}}">{{$products->name}}</a></h2>
 
                                 <div class="product-carousel-price">
-                                    <ins>{{$products->price}}</ins> <del>{{$products->price_sale}}</del>
+                                    <ins>{{ App\Helpers\Helper::price($products->price,$products->price_sale)}}</ins>
                                 </div>
                             </div>
                             @endforeach

@@ -4,10 +4,10 @@
 <html lang="en">
   <head>
    @include('head')
-   
+
   </head>
   <body>
- 
+
 
    <!-- @yield('menu')
      -->
@@ -50,12 +50,12 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        
+
         <div class="header-navigation">
             <ul>
                 <Li><a href="">Home</a></Li>
-                @foreach($menus_lm as $menul) 
-                <!-- href="/danh-muc/'.$menu->id.'-'. Str::slug($menu->name, '-').'.html" 
+                @foreach($menus_lm as $menul)
+                <!-- href="/danh-muc/'.$menu->id.'-'. Str::slug($menu->name, '-').'.html"
                 href="{{$menul->id}}.'-'.{{Str::slug($menul->name, '-').'.html'}}"-->
                 <li class="dropdown">
                     <a href="/danh-muc/{{$menul->id}}">
@@ -75,16 +75,16 @@
                 @endforeach
 
             </ul>
-        </div> 
+        </div>
     </div>
 </div>
 
 </div> <!-- End mainmenu area -->
-    
+
     <div class="slider-area">
         <div class="zigzag-bottom"></div>
         <div id="slide-list" class="carousel carousel-fade slide" data-ride="carousel">
-            
+
             <div class="slide-bulletz">
                 <div class="container">
                     <div class="row">
@@ -93,35 +93,15 @@
                                 <li data-target="#slide-list" data-slide-to="0" class="active"></li>
                                 <li data-target="#slide-list" data-slide-to="1"></li>
                                 <li data-target="#slide-list" data-slide-to="2"></li>
-                            </ol>                            
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="carousel-inner" role="listbox">
+
                 <div class="item active">
-                    <div class="single-slide">
-                        <div class="slide-bg slide-one"></div>
-                        <div class="slide-text-wrapper">
-                            <div class="slide-text">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-6 col-md-offset-6">
-                                            <div class="slide-content">
-                                                <h2>We are awesome</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, dolorem, excepturi. Dolore aliquam quibusdam ut quae iure vero exercitationem ratione!</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ab molestiae minus reiciendis! Pariatur ab rerum, sapiente ex nostrum laudantium.</p>
-                                                <a href="" class="readmore">Learn more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
                     <div class="single-slide">
                         <div class="slide-bg slide-two"></div>
                         <div class="slide-text-wrapper">
@@ -130,8 +110,8 @@
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-6">
                                             <div class="slide-content">
-                                                <h2>We are great</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur, dolorum harum molestias tempora deserunt voluptas possimus quos eveniet, vitae voluptatem accusantium atque deleniti inventore. Enim quam placeat expedita! Quibusdam!</p>
+                                                <h2>Giới thiệu</h2>
+                                                <p>Công ty TNHH Vnc Mobile thành lập vào tháng 05/2022 bởi 1 thành viên sáng lập Nguyễn Trọng Nghĩa, lĩnh vực hoạt động chính của công ty bao gồm: mua bán sửa chữa các thiết bị liên quan đến điện thoại di động, thiết bị kỹ thuật số và các lĩnh vực liên quan đến thương mại điện tử</p>
                                                 <a href="" class="readmore">Learn more</a>
                                             </div>
                                         </div>
@@ -150,9 +130,9 @@
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-6">
                                             <div class="slide-content">
-                                                <h2>We are superb</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eius?</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptates necessitatibus dicta recusandae quae amet nobis sapiente explicabo voluptatibus rerum nihil quas saepe, tempore error odio quam obcaecati suscipit sequi.</p>
+                                                <h2>Vnc Mobile</h2>
+
+                                                <p>Vnc Mobile ngày càng nhận được nhiều sự tín nhiệm và lòng tin của người tiêu dùng, số lượng khách mỗi ngày đến cửa hàng dao động gần 520.000 người. Do vậy, để có thể phục vụ khách hàng một cách tốt nhất các chuỗi hệ thống cửa hàng ngày càng được mở rộng ở các khu vực để khách hàng thuận tiện và dễ dàng mua sắm các thiết bị điện tử, gia dụng,...cho gia đình. ngày càng nhận được nhiều sự tín nhiệm và lòng tin của người tiêu dùng, số lượng khách mỗi ngày đến cửa hàng dao động gần 520.000 người. Do vậy, để có thể phục vụ khách hàng một cách tốt nhất các chuỗi hệ thống cửa hàng ngày càng được mở rộng ở các khu vực để khách hàng thuận tiện và dễ dàng mua sắm các thiết bị điện tử, gia dụng,...cho gia đình.</p>
                                                 <a href="" class="readmore">Learn more</a>
                                             </div>
                                         </div>
@@ -164,9 +144,9 @@
                 </div>
             </div>
 
-        </div>        
+        </div>
     </div> <!-- End slider area -->
-    
+
     <div class="promo-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -198,9 +178,9 @@
             </div>
         </div>
     </div> <!-- End promo area -->
-    
+
     @include('list')
-    
+
     <div class="brands-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -216,167 +196,16 @@
                             <img src="/Ustemplate/img/services_logo__1.jpg" alt="">
                             <img src="/Ustemplate/img/services_logo__2.jpg" alt="">
                             <img src="/Ustemplate/img/services_logo__3.jpg" alt="">
-                            <img src="/Ustemplate/img/services_logo__4.jpg" alt="">                            
+                            <img src="/Ustemplate/img/services_logo__4.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div> <!-- End brands area -->
-    
-    <div class="product-widget-area">
-        <div class="zigzag-bottom"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="single-product-widget">
-                        <h2 class="product-wid-title">Top Sellers</h2>
-                        <a href="" class="wid-view-more">View All</a>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="/Ustemplate/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                        <!--  -->
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="/Ustemplate/img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Apple new mac book 2015</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="/Ustemplate/img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Apple new i phone 6</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="single-product-widget">
-                        <h2 class="product-wid-title">Recently Viewed</h2>
-                        <a href="#" class="wid-view-more">View All</a>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="/Ustemplate/ img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="/Ustemplate/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Sony Smart Air Condtion</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="/Ustemplate/img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="single-product-widget">
-                        <h2 class="product-wid-title">Top New</h2>
-                        <a href="#" class="wid-view-more">View All</a>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="/Ustemplate/img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Apple new i phone 6</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="/Ustemplate/img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="/Ustemplate/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End product widget area -->
-    
+
+   @include('list2')
+
     <div class="footer-top-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -394,7 +223,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">User Navigation </h2>
@@ -404,10 +233,10 @@
                             <li><a href="#">Wishlist</a></li>
                             <li><a href="#">Vendor contact</a></li>
                             <li><a href="#">Front page</a></li>
-                        </ul>                        
+                        </ul>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Categories</h2>
@@ -417,10 +246,10 @@
                             <li><a href="#">LED TV</a></li>
                             <li><a href="#">Computer</a></li>
                             <li><a href="#">Gadets</a></li>
-                        </ul>                        
+                        </ul>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
                         <h2 class="footer-wid-title">Newsletter</h2>
@@ -436,7 +265,7 @@
             </div>
         </div>
     </div> <!-- End footer top area -->
-    
+
     <div class="footer-bottom-area">
         <div class="container">
             <div class="row">
@@ -445,7 +274,7 @@
                         <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a href="http://wpexpand.com" target="_blank">WP Expand</a></p>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="footer-card-icon">
                         <i class="fa fa-cc-discover"></i>
@@ -457,7 +286,7 @@
             </div>
         </div>
     </div> <!-- End footer bottom area -->
-   
+
     @include('footer')
   </body>
 </html>

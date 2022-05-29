@@ -13,7 +13,7 @@ class MainUsController extends Controller
     
         $menus_lm= Menu::where('parent_id',0)->get();
         $product = product::select('id','name','price','price_sale','thum')->orderByDesc('id')->limit(5);
-        return view('home',[
+        return view('main',[
             'title'=>'Vnc Store',
          
         

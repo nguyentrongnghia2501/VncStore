@@ -9,9 +9,77 @@
   <body>
  
 
-   @yield('menu')
-    
-    
+   <!-- @yield('menu')
+     -->
+     <div class="header-area">
+
+<div class="container">
+    <div class="row">
+
+
+
+    </div>
+</div>
+</div> <!-- End header area -->
+<div class="site-branding-area">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="logo">
+                <h1><a href="index.html"><span>Vnc Mobile</span></a></h1>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="shopping-item">
+                <a href="cart.html">Cart - <span class="cart-amunt">$800</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+</div> <!-- End site branding area -->
+
+<div class="mainmenu-area">
+<div class="container">
+    <div class="row">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+        <div class="header-navigation">
+            <ul>
+                <Li><a href="">Home</a></Li>
+                @foreach($menus_lm as $menul) 
+                <!-- href="/danh-muc/'.$menu->id.'-'. Str::slug($menu->name, '-').'.html" 
+                href="{{$menul->id}}.'-'.{{Str::slug($menul->name, '-').'.html'}}"-->
+                <li class="dropdown">
+                    <a href="/danh-muc/{{$menul->id}}">
+                        {{$menul->name}}
+
+                    </a>
+                    @if($menul->isChild->count())
+
+                    <ul class="dropdown-menu" >
+
+                          @foreach($menul->isChild as $menuChild)
+                        <li><a href="shop-product-list.html">{{$menuChild->name}}</a></li>
+                        @endforeach
+                    </ul>
+                    @endif
+                </li>
+                @endforeach
+
+            </ul>
+        </div> 
+    </div>
+</div>
+
+</div> <!-- End mainmenu area -->
     
     <div class="slider-area">
         <div class="zigzag-bottom"></div>
@@ -131,109 +199,7 @@
         </div>
     </div> <!-- End promo area -->
     
-    <div class="maincontent-area">
-        <div class="zigzag-bottom"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="latest-product">
-                        <h2 class="section-title">Latest Products</h2>
-                        <div class="product-carousel">
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="/Ustemplate/img/product-1.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
-                                
-                                <div class="product-carousel-price">
-                                    <ins>$700.00</ins> <del>$800.00</del>
-                                </div> 
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="/Ustemplate/img/product-2.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="single-product.html">Apple new mac book 2015 March :P</a></h2>
-                                <div class="product-carousel-price">
-                                    <ins>$899.00</ins> <del>$999.00</del>
-                                </div> 
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="/Ustemplate/img/product-3.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="single-product.html">Apple new i phone 6</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>                                 
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="/Ustemplate/img/product-4.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$200.00</ins> <del>$225.00</del>
-                                </div>                            
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="/Ustemplate/img/product-5.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="single-product.html">Sony Smart Air Condtion</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$1200.00</ins> <del>$1355.00</del>
-                                </div>                                 
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-6.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins>
-                                </div>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End main content area -->
+    @include('list')
     
     <div class="brands-area">
         <div class="zigzag-bottom"></div>

@@ -5,7 +5,7 @@
   	@include('admin.head')
 
 	</head>
-	<body class="img js-fullheight" style="background-image: url(/template/login/images/bg.jpg);">
+	<body class="img js-fullheight" style="background-image: url(/nvs/back.jpg);">
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">

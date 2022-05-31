@@ -24,7 +24,7 @@ Route::post('/admin/users/login/store/',[LoginController::class,'store']);
 Route::middleware(['auth'])->group(function(){
 
     Route::prefix('admin')->group(function () {
-                 
+
         Route::get('/',[MainController::class,'index'])->name('admin');
         Route::get('/test',[TestController::class,'store']);
         Route::post('/test/ps/',[TestController::class,'ps']);
@@ -37,11 +37,11 @@ Route::middleware(['auth'])->group(function(){
                     Route::DELETE('delete',[MenuController::class,'delete']);
                     Route::get('edit/{menu}',[MenuController::class,'show']);
                     Route::post('edit/{menu}',[MenuController::class,'update']);
-                
+
 
             });
-        ///products  
-   
+        ///products
+
         Route::prefix('products')->group(function(){
             Route::get('add',[ProductController::class,'create']);
             Route::post('add',[ProductController::class,'store']);
@@ -60,7 +60,7 @@ Route::middleware(['auth'])->group(function(){
             Route::get('edit/{id}',[SildeController::class,'show']);
             Route::post('edit/{id}',[SildeController::class,'update']);
     });
-        
+
 
 
 
@@ -68,4 +68,7 @@ Route::middleware(['auth'])->group(function(){
 
 });
 ///
+
 Route::get('/',[MainUsController::class,'index']);
+Route::get('',[MainUsController::class,'index']);
+Route::get('/single-product/{id}',[MainUsController::class,'single']);

@@ -19,4 +19,13 @@ class MainUsController extends Controller
 
         ])->with('menus_lm',$menus_lm,'product',$product);
     }
+    public function single()
+    {
+            return view('SingleProduct',[
+
+
+
+            ]
+            );
+    }
 }

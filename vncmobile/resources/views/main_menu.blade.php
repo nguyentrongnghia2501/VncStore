@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="logo">
-                <h1><a href="index.html"><span>Vnc Mobile</span></a></h1>
+                <h1><a href="index.html"><span>Vnc Store</span></a></h1>
             </div>
         </div>
 
@@ -28,6 +28,7 @@
         <div class="header-navigation">
             <ul>
                 <Li><a href="">Home</a></Li>
+                <Li><a href="/shoppage/">Shop Page</a></Li>
                 @foreach($menus_lm as $menul)
                 <!-- href="/danh-muc/'.$menu->id.'-'. Str::slug($menu->name, '-').'.html"
                 href="{{$menul->id}}.'-'.{{Str::slug($menul->name, '-').'.html'}}"-->

@@ -38,4 +38,16 @@ class MainUsController extends Controller
             ]
             );
     }
+    public function shoppage(){
+        $menus_lm= Menu::where('parent_id',0)->get();
+        $product =DB::table('products')->limit(8)->get();
+
+         return view('ShopPage',[
+
+            'title'=>'Shop page',
+            'menus_lm'=>$menus_lm,
+            'product'=>$product,
+
+         ]);
+    }
 }

@@ -72,3 +72,4 @@ Route::middleware(['auth'])->group(function(){
 Route::get('/',[MainUsController::class,'index']);
 Route::get('',[MainUsController::class,'index']);
 Route::get('/single-product/{id}',[MainUsController::class,'single']);
+route::get('/shoppage/',[MainUsController::class,'shoppage']);

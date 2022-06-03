@@ -6,6 +6,7 @@ use App\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class ShoppingCart extends Controller
 {
     //
@@ -18,5 +19,10 @@ class ShoppingCart extends Controller
             'menus_lm'=>$menus_lm,
             'product'=>$product,
         ]);
+    }
+    public function add($id)
+    {
+       $product = DB::table('products')->where('id',$id)->first();
+       dd($product);
     }
 }

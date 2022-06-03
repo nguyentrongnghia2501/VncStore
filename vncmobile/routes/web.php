@@ -10,6 +10,7 @@ use App\Http\Controllers\TestController;
 use Illuminate\Routing\Events\Routing;
 use App\Http\Controllers\Admin\SildeController;
 use App\Http\Controllers\MainUsController;
+use App\Http\Controllers\ShoppingCart;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -73,3 +74,4 @@ Route::get('/',[MainUsController::class,'index']);
 Route::get('',[MainUsController::class,'index']);
 Route::get('/single-product/{id}',[MainUsController::class,'single']);
 route::get('/shoppage/',[MainUsController::class,'shoppage']);
+route::get('/ShopPingCart/',[ShoppingCart::class,'index']);

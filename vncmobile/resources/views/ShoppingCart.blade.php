@@ -21,7 +21,9 @@
             </div>
         </div>
     </div> <!-- End Page title area -->
-
+@if($newCart != null)
+   <h1>ok</h1>
+@endif
 
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>

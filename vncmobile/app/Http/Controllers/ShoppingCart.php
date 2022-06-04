@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ShopCart;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Session;
 
 
 class ShoppingCart extends Controller
@@ -20,9 +22,23 @@ class ShoppingCart extends Controller
             'product'=>$product,
         ]);
     }
-    public function add($id)
+    public function add(Request $request,$id)
     {
        $product = DB::table('products')->where('id',$id)->first();
-       dd($product);
+       if($product != null)
+       {
+
+            $oldcart= Session('cart') ? Session('cart') : null;
+            //  biến giỏ hàng mới
+            $newCart =  new ShopCart($oldcart);
+            $newCart->AddCart($product,$id,$product->id);
+            $request->session()->put('cart',$newCart);
+
+
+       }
+       return view('ShoppingCart',[
+            'newCart' => $newCart,
+    ]);
+
     }
 }

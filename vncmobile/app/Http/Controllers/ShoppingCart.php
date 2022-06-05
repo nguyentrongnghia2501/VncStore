@@ -22,8 +22,6 @@ class ShoppingCart extends Controller
             'product'=>$product,
         ]);
     }
-    public function Cart(){
 
-    }
 
 }

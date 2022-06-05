@@ -75,7 +75,7 @@ Route::get('/',[MainUsController::class,'index']);
 Route::get('',[MainUsController::class,'index']);
 Route::get('/single-product/{id}',[MainUsController::class,'single']);
 route::get('/shoppage/',[MainUsController::class,'shoppage']);
-// route::get('/ShopPingCart/',[ShoppingCart::class,'index']);
-Route::post('add-cart',[CartController::class,'index']);
-Route::get('carts',[CartController::class,'show']);
+//  giỏ hàng
+Route::post('/add-cart',[CartController::class,'SaveCart']);
+
 

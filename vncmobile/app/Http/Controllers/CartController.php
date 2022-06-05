@@ -3,69 +3,59 @@
 namespace App\Http\Controllers;
 
 use App\Models\product;
-use Illuminate\Support\Facades\Session;
-
+use Session;
 
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
+
 use App\Models\Menu;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 
 class CartController extends Controller
 {
     //
-    public function index(Request $request)
-    {
-            $quanty = (int)$request->input('quantity_product');
-            $product_id = (int)$request->input('product_id');
+    public function SaveCart(Request $request){
 
-            if($quanty <=0 || $product_id<=0 )
-            {
-               Session::flash('error','Số lượng hoặc sản phẩm không chính xác !');
-
-                return false;
-            }
-
-            $carts = Session::get('carts');
-           if(is_null($carts)){
-               Session::put('carts', [
-                   $product_id =>$quanty
-               ]);
-               return true;
-           }
-
-           $exists = Arr::exists($carts, $product_id);
-           if($exists)
+        $productId = $request->productIdd_hidden;
+        $id = $productId;
+        // $data = Collection::make([1, 2 ])->sum();
+        // dd($data);
+        $quanty= $request->quantity_product;
+        $menus_lm= Menu::where('parent_id',0)->get();
+        $product_cart = product::find($productId);
+         $cart =session()->get('cart');
+       // $cart= array();
+           if(isset($cart[$id]))
            {
 
-              //update
-              $quantyNew =$carts[$product_id] + $quanty;
-              Session::put('carts',[
-                  $product_id =>$quantyNew
-              ]);
-                return true;
+                    $cart[$id]['quanty']=Collection::make([$cart[$id]['quanty'], $quanty ])->sum();
+
            }
+           else{
+               $cart[$id] =[
+                   'name'=>$product_cart->name,
+                   'price'=>$product_cart->price,
+                   'quanty'=>$quanty,
+                   'thum'=>$product_cart->thum,
+                   'price_sale'=>$product_cart->price_sale,
 
-           Session::put('carts', [
-            $product_id =>$quanty
-        ]);
-       return redirect('/carts');
+               ];
+           }
+           session()->put('cart',$cart);
+           $carts = session()->get('cart');
+
+          return view('ShoppingCart',
+            [
+                'title'=>'Giỏ hàng',
+                'menus_lm'=>$menus_lm,
+                'carts'=>$carts
+            ]
+        );
 
 
-    }
-    public function show(){
-        $carts = Session::get('carts');
-        if(is_null($carts))  return [];
-        $productId = array_keys($carts);  /// lấy id
+     }
 
-        $products= product::where('id',$productId)->get();
-        $menus_lm= Menu::where('parent_id',0)->get();
-
-      return view('ShoppingCart',[
-          'title'=>'Giỏ hàng',
-          'products'=>$products,
-          'menus_lm'=>$menus_lm
-      ]);
-    }
 }

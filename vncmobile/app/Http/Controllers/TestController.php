@@ -16,24 +16,40 @@ class TestController extends Controller
     public function __construct(TestService $testService)
     {
          $this->testService =$testService;
-        
+
     }
     public function store(Request $request)
     {
-       return view('admin.Uloadts.test',[
-           'title'=>'Bản test',
-        
-       ]);
+        $collection = collect([1, 2]);
+
+        $matrix = $collection->crossJoin(['a', 'b']);
+
+        $matrix->all();
+
+        /*
+            [
+                [1, 'a'],
+                [1, 'b'],
+                [2, 'a'],
+                [2, 'b'],
+            ]
+        */
+
+        $collection = collect([1, 2]);
+
+        $matrix = $collection->crossJoin(['a', 'b'], ['I', 'II']);
+
+        $matrix->all();
 
 
     }
-   
+
     public function ps(Request $request){
         // $Tests= new Tests;
         $test = new test;
-       
+
         $test->name =$request->input('name');
-        
+
         if($request->hasFile('thum'))
         {
                 $file= $request->file('thum');
@@ -50,7 +66,7 @@ class TestController extends Controller
     //         'name'=>(string)$request->input('name'),
     //         'thum'=>$path,
 
- 
+
     //  ]);
 
     }

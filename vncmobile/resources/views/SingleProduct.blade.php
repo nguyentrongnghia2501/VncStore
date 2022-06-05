@@ -75,7 +75,8 @@
                             <a href="">Sony Smart TV - 2015</a>
                         </div>
 
-                        <div class="row">@foreach($product_id as $pro)
+                        <div class="row">
+                            @foreach($product_id as $pro)
                             <div class="col-sm-6">
                                 <div class="product-images">
 
@@ -102,11 +103,13 @@
                                         <ins>${{$pro->price}}</ins> <del>${{$pro->price_sale}}</del>
                                     </div>
 
-                                    <form action="" class="cart">
+                                    <form action="/add-cart" method="post" class="cart">
                                         <div class="quantity">
-                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity_product" min="1" step="1">
                                         </div>
                                         <button class="add_to_cart_button" type="submit">Add to cart</button>
+                                        <input type="hidden" name="product_id" value="{{$pro->id}}">
+                                        @csrf
                                     </form>
 
                                     <div class="product-inner-category">

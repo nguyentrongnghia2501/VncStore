@@ -9,6 +9,7 @@ use App\Http\Controllers\Products\ProductController;
 use App\Http\Controllers\TestController;
 use Illuminate\Routing\Events\Routing;
 use App\Http\Controllers\Admin\SildeController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\MainUsController;
 use App\Http\Controllers\ShoppingCart;
 
@@ -74,12 +75,7 @@ Route::get('/',[MainUsController::class,'index']);
 Route::get('',[MainUsController::class,'index']);
 Route::get('/single-product/{id}',[MainUsController::class,'single']);
 route::get('/shoppage/',[MainUsController::class,'shoppage']);
-route::get('/ShopPingCart/',[ShoppingCart::class,'index']);
-// Route::prefix(('cart'))->group(function(){
-//         Route::get('add/{id}',[ShoppingCart::class,'add'])->name('cart.add');
-//         Route::get('remove/{id}',[ShoppingCart::class,'remove'])->name('remove');
-//         Route::get('update/{id}',[ShoppingCart::class,'update'])->name('update');
-//         Route::get('clear',[ShoppingCart::class,'clear'])->name('clear');
+// route::get('/ShopPingCart/',[ShoppingCart::class,'index']);
+Route::post('add-cart',[CartController::class,'index']);
+Route::get('carts',[CartController::class,'show']);
 
-// });
-route::get('addcart/{id}',[ShoppingCart::class,'add']);

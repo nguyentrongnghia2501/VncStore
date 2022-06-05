@@ -11,7 +11,7 @@
                                 <div class="product-f-image">
                                     <img src="/nvs/{{$products->thum}}" alt="">
                                     <div class="product-hover">
-                                    <a href="/addcart/{{$products->id}}" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                    <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                   <!-- <a href="#" class="add-to-cart-link"> <button class="add-to-cart-link" style="border: none;background-color: #1abc9c;""><i class="fa fa-shopping-cart"></i>Add to cart</button> </a> -->
                                         <a href="/single-product/{{$products->id}}" class="view-details-link"><i class="fa fa-link"></i>Chi tiết</a>
                                     </div>

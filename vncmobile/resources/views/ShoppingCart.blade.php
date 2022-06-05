@@ -21,9 +21,7 @@
             </div>
         </div>
     </div> <!-- End Page title area -->
-@if($newCart != null)
-   <h1>ok</h1>
-@endif
+
 
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
@@ -82,6 +80,7 @@
                     </div>
                 </div>
 
+
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="woocommerce">
@@ -98,18 +97,20 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+@foreach($products as $pro)
                                         <tr class="cart_item">
                                             <td class="product-remove">
                                                 <a title="Remove this item" class="remove" href="#">×</a>
                                             </td>
 
                                             <td class="product-thumbnail">
-                                                <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="img/product-thumb-2.jpg"></a>
+                                                <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="/nvs/{{$pro->thum}}"></a>
                                             </td>
 
                                             <td class="product-name">
-                                                <a href="single-product.html">Ship Your Idea</a>
+                                                <a href="single-product.html">{{$pro->name}}</a>
                                             </td>
+
 
                                             <td class="product-price">
                                                 <span class="amount">£15.00</span>
@@ -127,6 +128,9 @@
                                                 <span class="amount">£15.00</span>
                                             </td>
                                         </tr>
+
+
+
                                         <tr>
                                             <td class="actions" colspan="6">
                                                 <div class="coupon">
@@ -138,7 +142,9 @@
                                                 <input type="submit" value="Proceed to Checkout" name="proceed" class="checkout-button button alt wc-forward">
                                             </td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
+
                                 </table>
                             </form>
 
